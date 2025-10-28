@@ -1,48 +1,63 @@
 # Fungsi dan Prosedur dalam C dan Python
-## Pengertian Fungsi dan Prosedur
+---
+## Tujuan Pembelajaran
 
-- **Fungsi**: Blok kode yang mengembalikan nilai (return).
-- **Prosedur**: Blok kode tanpa return (hanya jalankan tugas).
-## Deklarasi Fungsi dan Prosedur dalam C
-### Deklarasi Fungsi dalam C
+1. Menjelaskan konsep fungsi dan prosedur.
+2. Membuat dan memanggil fungsi dengan parameter dan return value.
+3. Memahami modularitas program.
+---
+## Dasar Teori
 
-```c
-int tambah(int a, int b) {  // Fungsi return int
-    return a + b;
-}
-```
+Fungsi adalah blok kode yang dapat digunakan berulang kali.
 
-Panggil: `int hasil = tambah(3, 4);`
-### Deklarasi Prosedur dalam C
-
-```c
-void cetak(char pesan[]) {  // Prosedur (void)
-    printf("%s\n", pesan);
-}
-```
-### main():
+- **Fungsi** mengembalikan nilai (`return`).
+- **Prosedur** hanya menjalankan tugas tanpa mengembalikan nilai.
+---
+## Implementasi dalam Bahasa C
 
 ```c
 #include <stdio.h>
+
+int tambah(int a, int b) {
+    return a + b;
+}
+
+void cetak(char pesan[]) {
+    printf("%s\n", pesan);
+}
+
 int main() {
     cetak("Halo!");
     printf("Hasil: %d\n", tambah(3, 4));
     return 0;
 }
 ```
-## Deklarasi Fungsi dan Prosedur dalam Python
-Di Python, semua adalah fungsi (prosedur jika tanpa return).
-### Deklarasi Fungsi dalam Python
+---
+## Implementasi dalam Bahasa Python
 
 ```python
-def tambah(a, b):  # Fungsi
+def tambah(a, b):
     return a + b
 
-def cetak(pesan):  # Prosedur
+def cetak(pesan):
     print(pesan)
 
-# Panggil
 cetak("Halo!")
 print("Hasil:", tambah(3, 4))
 ```
+---
+## Latihan
 
+1. Buat fungsi `rata_rata(a, b, c)` yang mengembalikan nilai rata-rata.
+2. Buat prosedur `sapa()` yang menampilkan “Selamat datang di praktikum!”.
+3. Implementasikan fungsi tanpa parameter yang mengembalikan nilai tetap.
+---
+## Pertanyaan Refleksi
+
+- Apa manfaat utama penggunaan fungsi dalam program besar?
+- Apa perbedaan fungsi dan prosedur dari sisi implementasi?
+---
+## Referensi
+
+- [C Functions – GeeksforGeeks](https://www.geeksforgeeks.org/functions-in-c/)
+- [Python Functions – W3Schools](https://www.w3schools.com/python/python_functions.asp)

@@ -1,7 +1,18 @@
 # Sorting dan Searching
-## Binary Search
-Algoritma pencarian cepat pada data terurut. Bagi array jadi dua, periksa tengah.
-### dalam Python
+---
+## Tujuan Pembelajaran
+
+1. Memahami konsep dasar pencarian dan pengurutan data.
+2. Mengimplementasikan algoritma Binary Search dan Bubble Sort.
+3. Mengenali kompleksitas waktu dari algoritma dasar.
+---
+## Dasar Teori
+
+- **Searching:** mencari posisi elemen dalam data.
+- **Sorting:** menyusun data dalam urutan tertentu.
+- Kompleksitas waktu sering dilambangkan dengan Big O.
+---
+## Implementasi Binary Search (Python)
 
 ```python
 def binary_search(arr, target):
@@ -14,16 +25,13 @@ def binary_search(arr, target):
             low = mid + 1
         else:
             high = mid - 1
-    return -1  # Tidak ditemukan
+    return -1
 
 arr = [10, 20, 30, 40, 50]
 print(binary_search(arr, 30))  # Output: 2
 ```
-
-Link Visualisasi: [Binary Search Visualizer](https://binary-search-visualization.netlify.app/)
-## Bubble Sort
-Sorting sederhana: Bandingkan pasangan tetangga, tukar jika salah urut.
-### dalam Python
+---
+## Implementasi Bubble Sort (Python)
 
 ```python
 def bubble_sort(arr):
@@ -35,7 +43,26 @@ def bubble_sort(arr):
     return arr
 
 arr = [64, 34, 25, 12, 22]
-print(bubble_sort(arr))  # [12, 22, 25, 34, 64]
+print(bubble_sort(arr))
 ```
+---
+## Analisis Algoritma
 
-Link Visualisasi: [Bubble Sort visualize | Algorithms | HackerEarth](https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/)
+- **Binary Search:** `O(log n)`
+- **Bubble Sort:** `O(n²)`
+---
+## Latihan
+
+1. Implementasikan **Linear Search**.
+2. Ubah **Bubble Sort** menjadi urutan menurun (descending).
+3. Gunakan **Binary Search** pada data yang tidak urut — amati hasilnya.
+---
+## Pertanyaan Refleksi
+
+- Mengapa Binary Search membutuhkan data terurut?
+- Apa kelemahan utama Bubble Sort?
+---
+## Referensi
+
+- [Bubble Sort Visualization – HackerEarth](https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/)
+- [Binary Search Visualizer](https://binary-search-visualization.netlify.app/)
